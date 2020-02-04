@@ -4,14 +4,15 @@
 #include<stdio.h>
 #include<conio.h>
 int gcd(int m,int n)
-{   int rem;
-    while(n!=0)
-    {
-        rem=m%n;
-        m=n;
-        n=rem;
-    }
-    return m;
+{   
+   while(m!=n)
+   {
+     if(m>n)
+      m=m-n;
+    else
+      n=n-m;
+   }
+   return m;
 }
 int main()
 {   
